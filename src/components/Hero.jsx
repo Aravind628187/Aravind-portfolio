@@ -18,7 +18,10 @@ export default function Hero() {
     "MongoDB",
     "AWS",
   ];
-  const [leetcodeSolved, setLeetcodeSolved] = useState(64);
+  const [stats, setStats] = useState({
+  leetcodeSolved: 0,
+  hackerrankSolved: 0,
+});
 
   useEffect(() => {
   fetch("/stats.json")
@@ -165,6 +168,10 @@ export default function Hero() {
           <div className="stat-card">
             <h3>{leetcodeSolved}+</h3>
             <p>Leetcode Solved</p>
+          </div>
+          <div className="stat-card">
+            <h3>{stats.hackerrankSolved}+</h3>
+            <p>HackerRank Solved</p>
           </div>
 
           <div className="stat-card">

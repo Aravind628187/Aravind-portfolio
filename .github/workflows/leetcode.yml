@@ -2,6 +2,7 @@ name: Update LeetCode Stats
 
 on:
   workflow_dispatch:
+
   schedule:
     - cron: "0 */12 * * *"
 
@@ -13,15 +14,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Fetch LeetCode Stats
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Fetch LeetCode Count
         run: |
-          curl -s https://leetcode-stats-api.herokuapp.com/aravind628187 > public/stats.json
+          RESPONSE=$(curl -s -X POST https://leetcode.com/graphql \
+          -H "Content-Type: application/json" \
+          --data '{
+            "query":"query userProblemsSolved($username: String!) { matchedUser(username: $username) { submitStatsGlobal { acSubmissionNum { difficulty count } } } }",
+            "variables":{"username":"aravind628187"}
+          }')
 
-      - name: Commit changes
+          TOTAL=$(echo "$RESPONSE" | jq '.data.matchedUser.submitStatsGlobal.acSubmissionNum[0].count')
+
+          echo "{
+            \"leetcodeSolved\": $TOTAL,
+            \"hackerrankSolved\": 25
+          }" > public/stats.json
+
+      - name: Commit Changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
