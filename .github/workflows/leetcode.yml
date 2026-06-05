@@ -1,9 +1,9 @@
 name: Update LeetCode Stats
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 */12 * * *"
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -13,36 +13,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-      - name: Get LeetCode Solved Count
+      - name: Fetch LeetCode Stats
         run: |
-          curl -X POST https://leetcode.com/graphql \
-          -H "Content-Type: application/json" \
-          -d '{
-            "query":"query userProblemsSolved($username: String!) { matchedUser(username: $username) { submitStatsGlobal { acSubmissionNum { difficulty count } } } }",
-            "variables":{"username":"aravind628187"}
-          }' > result.json
+          curl -s https://leetcode-stats-api.herokuapp.com/aravind628187 > public/stats.json
 
-      - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
-
-      - name: Update stats.json
-        run: |
-          TOTAL=$(jq '.data.matchedUser.submitStatsGlobal.acSubmissionNum[0].count' result.json)
-
-          echo "{
-            \"leetcodeSolved\": $TOTAL
-          }" > public/stats.json
-
-      - name: Commit Changes
+      - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
           git add public/stats.json
 
-          git commit -m "Update LeetCode Stats" || exit 0
+          git diff --staged --quiet || git commit -m "Update LeetCode Stats"
 
           git push
