@@ -18,15 +18,15 @@ export default function Hero() {
     "MongoDB",
     "AWS",
   ];
-  const [leetcodeSolved, setLeetcodeSolved] = useState(0);
+  const [leetcodeSolved, setLeetcodeSolved] = useState(64);
 
   useEffect(() => {
-   fetch("/stats.json")
+  fetch("/stats.json")
     .then((res) => res.json())
-    .then((data) => setLeetcodeSolved(data.leetcodeSolved))
-    .catch((err) => console.error(err));
+    .then((data) => {
+      setLeetcodeSolved(data.leetcodeSolved);
+    });
 }, []);
-
   return (
     <section className="hero-section">
       <div className="hero-glow hero-glow-1"></div>
@@ -163,7 +163,7 @@ export default function Hero() {
           </div>
 
           <div className="stat-card">
-            <h3>{leetcodeSolved}</h3>
+            <h3>{leetcodeSolved}+</h3>
             <p>Leetcode Solved</p>
           </div>
 
