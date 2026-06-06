@@ -1,16 +1,218 @@
-# React + Vite
+# 🚀 Aravind Kumar Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive developer portfolio built using React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+🌐 Live Demo: https://your-portfolio-link.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 👨‍💻 About Me
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Hi, I'm Aravind Kumar, a passionate Java Backend Developer focused on building scalable REST APIs, microservices, and cloud-ready applications.
 
-## Expanding the ESLint configuration
+### Interests
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Java Development
+- Spring Boot
+- REST APIs
+- Microservices
+- React.js
+- MySQL
+- MongoDB
+- AWS Basics
+
+---
+
+## ✨ Features
+
+- Modern UI/UX Design
+- Fully Responsive Layout
+- About Section
+- Skills Showcase
+- Featured Projects
+- Certifications & Achievements
+- Contact Form with EmailJS
+- Resume Download
+- Social Media Links
+- Smooth Scrolling Navigation
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React.js
+- Vite
+- JavaScript
+- CSS3
+- Tailwind CSS
+- Lucide React Icons
+
+### Tools
+
+- Git
+- GitHub
+- VS Code
+- Vercel
+- EmailJS
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Skills.jsx
+│   ├── Projects.jsx
+│   ├── Achievements.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## 🚀 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Aravind628187/Aravind-portfolio.git
+```
+
+Move into project folder:
+
+```bash
+cd Aravind-portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+Open browser:
+
+```bash
+http://localhost:5173
+```
+
+---
+
+## 📦 Build For Production
+
+```bash
+npm run build
+```
+
+Preview build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 📸 Featured Projects
+
+### AI Resume Analyzer
+
+- Resume analysis using AI
+- Skill matching
+- ATS score prediction
+
+### HUB Cars
+
+- Car marketplace platform
+- Vehicle recommendation
+- Price prediction system
+
+### Employee Management System
+
+- Spring Boot Backend
+- MySQL Database
+- CRUD Operations
+- REST APIs
+
+---
+
+## 🏆 Certifications
+
+### React (Basic) Certificate
+
+Issued by HackerRank
+
+🔗 https://www.hackerrank.com/certificates/4e6f3a4ead28
+
+### Android Development Bootcamp
+
+Issued by Udemy
+
+- Kotlin Development
+- Android App Development
+
+---
+
+## 📈 Coding Profiles
+
+### LeetCode
+
+- 65+ Problems Solved
+
+### HackerRank
+
+- 25+ Problems Solved
+
+---
+
+## 📬 Contact
+
+### Email
+
+chithamanaravind@gmail.com
+
+### LinkedIn
+
+https://www.linkedin.com/in/chinthamanuaravindkumar
+
+### GitHub
+
+https://github.com/Aravind628187
+
+---
+
+## 📄 Resume
+
+Resume available in the portfolio website.
+
+---
+
+## ⭐ Support
+
+If you like this project, please give it a star ⭐ on GitHub.
+
+---
+
+## © Author
+
+**Aravind Kumar**
+
+Java Backend Developer
+
+Built with ❤️ using React + Vite
