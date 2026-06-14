@@ -7,7 +7,6 @@ export default function Skills() {
     "MySQL",
     "MongoDB",
     "AWS",
-    "Docker",
     "Git",
     "Postman",
   ];

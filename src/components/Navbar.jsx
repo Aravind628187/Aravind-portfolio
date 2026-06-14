@@ -6,17 +6,38 @@ export default function Navbar() {
       <nav className="navbar-container">
 
         {/* Logo */}
-        <div className="navbar-logo">
-          <span className="logo-dot"></span>
-          Aravind.dev
-        </div>
+        <a href="#home" className="navbar-logo">
+          <div className="navbar-logo">
+           Aravind Kumar
+          </div>
+        </a>
 
         {/* Links */}
         <div className="navbar-links">
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+
+          <a href="#home">Home</a>
+
+          <a href="#about">
+            About
+          </a>
+
+          <a href="#skills">
+            Skills
+          </a>
+
+          <a href="#projects">
+            Projects
+          </a>
+
+
+          <a href="#achievements">
+            Achievements
+          </a>
+
+          <a href="#contact">
+            Contact
+          </a>
+
         </div>
 
         {/* Actions */}
@@ -24,6 +45,8 @@ export default function Navbar() {
 
           <a
             href="/resume.pdf"
+            target="_blank"
+            rel="noreferrer"
             className="resume-btn"
           >
             <Download size={16} />

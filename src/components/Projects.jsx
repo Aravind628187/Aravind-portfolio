@@ -11,9 +11,9 @@ const projects = [
   {
     title: "HUB Cars",
     desc: "AI powered smart car marketplace application with price prediction and vehicle recommendation features.",
-    tech: ["Java", "MySQL", "React"],
+    tech: ["Python", "MongoDB", "React","Express","Node.js","Mechine Learning"],
     github: "https://github.com/Aravind628187/Car-price-prediction-system",
-    image: "/projects/hub-cars.png",
+    image: "/public/hubs-cars.png",
     demo: "#",
   },
 
@@ -22,7 +22,7 @@ const projects = [
     desc: "Full CRUD employee management application built using Spring Boot and MySQL with REST APIs.",
     tech: ["Spring Boot", "MySQL"],
     github: "#",
-    image: "/projects/employee-management.png",
+    image: "/public/employee-management.png",
     demo: "#",
   },
 ];
@@ -54,16 +54,15 @@ export default function Projects() {
           >
 
             {/* Project Screenshot */}
-            <div className="project-image">
+            <div className="project-image-wrapper">
 
               <img
                 src={project.image}
                 alt={project.title}
+                className="project-image"
               />
 
-              <span className="project-number">
-                0{index + 1}
-              </span>
+  
 
             </div>
 

@@ -1,3 +1,6 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 import {
   Mail,
   Phone,
@@ -7,24 +10,42 @@ import {
 } from "lucide-react";
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_8y10fpm", // Service ID
+        "template_q9b7h3w", // Replace
+        form.current,
+        "UE7oG5_-UWJoqHxnm" // Replace
+      )
+      .then(
+        () => {
+          alert("✅ Message Sent Successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          alert("❌ Failed to Send Message");
+          console.log(error);
+        }
+      );
+  };
+
   return (
     <section id="contact" className="contact-section">
 
       {/* Header */}
       <div className="contact-header">
 
-        <span className="contact-badge">
+        <div className="contact-badge">
+          📬 Contact Me
+        </div>
+
+        <p className="contact-tagline">
           🚀 Let's Work Together
-        </span>
-
-        <h2>
-          Let's Build Something Great Together
-        </h2>
-
-        <p>
-          Open to internships, freelance projects and
-          full-time opportunities in Java Backend Development,
-          Spring Boot and Full Stack Development.
         </p>
 
       </div>
@@ -71,13 +92,11 @@ export default function Contact() {
           </div>
 
           <div className="social-links">
-
             <a
               href="https://github.com/Aravind628187"
               target="_blank"
               rel="noreferrer"
             >
-              
               GitHub
             </a>
 
@@ -86,10 +105,8 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              
               LinkedIn
             </a>
-
           </div>
 
           <a
@@ -103,26 +120,38 @@ export default function Contact() {
         </div>
 
         {/* RIGHT SIDE */}
-        <form className="contact-form">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="contact-form"
+        >
 
           <input
             type="text"
+            name="user_name"
             placeholder="Your Name"
+            required
           />
 
           <input
             type="email"
+            name="user_email"
             placeholder="Your Email"
+            required
           />
 
           <input
             type="text"
+            name="subject"
             placeholder="Subject"
+            required
           />
 
           <textarea
+            name="message"
             rows="6"
             placeholder="Tell me about your project..."
+            required
           />
 
           <button type="submit">
@@ -134,9 +163,7 @@ export default function Contact() {
       </div>
 
       {/* Bottom CTA */}
-
       <div className="contact-footer">
-
         <h3>
           Ready to build scalable applications together?
         </h3>
@@ -144,7 +171,6 @@ export default function Contact() {
         <p>
           Let's connect and create something impactful.
         </p>
-
       </div>
 
     </section>

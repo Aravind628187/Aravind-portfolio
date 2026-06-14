@@ -1,15 +1,49 @@
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+} from "react-icons/fa";
+
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800 py-10 text-center">
-      <div className="mb-4 flex justify-center gap-6">
-        <a href="https://github.com">GitHub</a>
-        <a href="https://linkedin.com">LinkedIn</a>
-        <a href="mailto:aravind@gmail.com">Email</a>
-      </div>
+    <footer className="footer">
+      <div className="footer-container">
 
-      <p className="text-zinc-500">
-        © 2026 Aravind Kumar
-      </p>
+        <h3 className="footer-name">
+          Aravind Kumar
+        </h3>
+
+        <p className="footer-role">
+          Java Backend Developer
+        </p>
+
+        <div className="footer-socials">
+          <a
+            href="https://github.com/Aravind628187"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub />
+          </a>
+
+          <a
+            href="https://linkedin.com/in/chinthamanuaravindkumar"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a href="mailto:chithamanaravind@gmail.com">
+            <FaEnvelope />
+          </a>
+        </div>
+
+        <p className="footer-copy">
+          © {new Date().getFullYear()} Aravind Kumar. All Rights Reserved.
+        </p>
+
+      </div>
     </footer>
   );
 }
