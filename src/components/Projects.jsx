@@ -1,11 +1,14 @@
+import resumeAnalyzer from "../assets/resume-analyzer.png";
+import hubsCars from "../assets/hubs-cars.png";
+import employeeManagement from "../assets/employee-management.png";
+
 const projects = [
   {
     title: "AI Resume Analyzer",
     desc: "Gemini powered resume analysis and feedback platform that helps users improve resumes using AI generated suggestions.",
     tech: ["React", "Gemini", "Spring Boot"],
     github: "https://github.com/Aravind628187/AI-Resume-Analyzer",
-    image: "/public/resume-analyzer.png",
-    demo: "#",
+    image: "resume-analyzer.png"
   },
 
   {
@@ -13,8 +16,7 @@ const projects = [
     desc: "AI powered smart car marketplace application with price prediction and vehicle recommendation features.",
     tech: ["Python", "MongoDB", "React","Express","Node.js","Mechine Learning"],
     github: "https://github.com/Aravind628187/Car-price-prediction-system",
-    image: "/public/hubs-cars.png",
-    demo: "#",
+    image: "hubs-cars.png"
   },
 
   {
@@ -22,8 +24,8 @@ const projects = [
     desc: "Full CRUD employee management application built using Spring Boot and MySQL with REST APIs.",
     tech: ["Spring Boot", "MySQL"],
     github: "#",
-    image: "/public/employee-management.png",
-    demo: "#",
+    image: "employee-management.png"
+    
   },
 ];
 
@@ -57,9 +59,12 @@ export default function Projects() {
             <div className="project-image-wrapper">
 
               <img
-                src={project.image}
-                alt={project.title}
-                className="project-image"
+               src={project.image}
+               alt={project.title}
+               className="project-image"
+               onError={(e) => {
+                  console.log("Image failed:", project.image);
+                }}
               />
 
   
