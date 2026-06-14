@@ -8,7 +8,7 @@ const projects = [
     desc: "Gemini powered resume analysis and feedback platform that helps users improve resumes using AI generated suggestions.",
     tech: ["React", "Gemini", "Spring Boot"],
     github: "https://github.com/Aravind628187/AI-Resume-Analyzer",
-    image: resumeanalyzer,
+    image: resumeAnalyzer,
   },
 
   {
@@ -16,7 +16,7 @@ const projects = [
     desc: "AI powered smart car marketplace application with price prediction and vehicle recommendation features.",
     tech: ["Python", "MongoDB", "React","Express","Node.js","Mechine Learning"],
     github: "https://github.com/Aravind628187/Car-price-prediction-system",
-    image: hubscars,
+    image: hubsCars,
   },
 
   {
@@ -24,7 +24,7 @@ const projects = [
     desc: "Full CRUD employee management application built using Spring Boot and MySQL with REST APIs.",
     tech: ["Spring Boot", "MySQL"],
     github: "#",
-    image: employeemanagement,
+    image: employeeManagement,
   },
 ];
 
