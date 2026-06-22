@@ -4,10 +4,10 @@ import employeeManagement from "../assets/employee-management.png";
 
 const projects = [
   {
-    title: "AI Resume Analyzer",
-    desc: "Gemini powered resume analysis and feedback platform that helps users improve resumes using AI generated suggestions.",
-    tech: ["React", "Gemini", "Spring Boot"],
-    github: "https://github.com/Aravind628187/AI-Resume-Analyzer",
+    title: "AI Resume Analyzer Pro",
+    desc: "AI Resume Analyzer Pro - A free ATS resume evaluation tool that analyzes resumes, calculates ATS scores, identifies missing skills, and provides recruiter-focused improvement suggestions.",
+    tech: ["React", "Vite", "Javascript","HTML5","CSS3"],
+    github: "https://github.com/Aravind628187/ai-resume-analyzer-pro",
     image: resumeAnalyzer,
   },
 
