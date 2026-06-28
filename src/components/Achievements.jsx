@@ -32,14 +32,14 @@ export default function Achievements() {
             className="certificate-image"
           />
 
-          <h3>Data Science & Analytics</h3>
+          <h3>HP LIFE – Data Science & Analytics</h3>
 
           <p>
-           HP LIFE (HP Foundation) • June 2026
+           Issued by HP Foundation • June 2026
           </p>
 
           <a
-           href="/certificates/Data Science & Analytics.pdf"
+           href="/certificates/hp-data-science.png"
            target="_blank"
            rel="noreferrer"
            className="certificate-btn"
