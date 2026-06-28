@@ -7,29 +7,33 @@ export default function About() {
           <span className="about-badge">About Me</span>
 
           <h2>
-            Passionate Java Backend Developer
+             Aspiring Data Scientist & Data Analyst
           </h2>
 
           <p>
-            I'm Aravind Kumar, a passionate Java Backend Developer
-            focused on building scalable REST APIs, microservices,
-            and cloud-ready applications using Spring Boot and
-            modern technologies.
+            I'm Aravind Kumar, a B.Tech CSE (AI & ML) student at Parul
+            University passionate about Data Science, Data Analytics,
+            Machine Learning, and Artificial Intelligence. I enjoy
+            transforming raw data into meaningful insights using Python,
+            SQL, Power BI, Excel, and Machine Learning.
           </p>
 
           <p>
-            I enjoy solving problems on LeetCode, developing
-            full-stack applications, and continuously improving
-            my software engineering skills.
+            I build end-to-end data analytics projects, predictive machine
+            learning models, interactive dashboards, and AI-powered
+            applications while continuously improving my analytical and
+            problem-solving skills.
           </p>
 
           <div className="about-skills">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>React</span>
-            <span>MySQL</span>
-            <span>MongoDB</span>
-            <span>AWS</span>
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Scikit-Learn</span>
+            <span>Excel</span>
+            <span>Power BI</span>
+            <span>Machine Learning</span>
           </div>
         </div>
 

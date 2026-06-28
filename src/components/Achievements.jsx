@@ -22,11 +22,39 @@ export default function Achievements() {
           real-world software solutions.
         </p>
       </div>
+      {/* HP LIFE Data Science & Analytics */}
+
+       <div className="experience-card certificate-card">
+
+          <img
+            src="/certificates/hp-data-science.png"
+            alt="HP Data Science & Analytics"
+            className="certificate-image"
+          />
+
+          <h3>Data Science & Analytics</h3>
+
+          <p>
+           HP LIFE (HP Foundation) • June 2026
+          </p>
+
+          <a
+           href="/certificates/Data Science & Analytics.pdf"
+           target="_blank"
+           rel="noreferrer"
+           className="certificate-btn"
+          >
+            View Certificate
+           <ExternalLink size={16} />
+         </a>
+
+        </div>
 
       <div className="experience-grid">
 
         {/* React Certificate */}
         <div className="experience-card certificate-card">
+          
           <img
             src="/certificates/react-certificate.png"
             alt="React Certificate"
@@ -104,19 +132,6 @@ export default function Achievements() {
           </p>
         </div>
 
-        {/* Placement */}
-        <div className="experience-card">
-          <Trophy size={32} />
-
-          <h3>Placement Achievement</h3>
-
-          <p>
-            Selected for the next round of
-            TERN Placement Drive for Backend
-            Developer role.
-          </p>
-        </div>
-
         {/* Coding Journey */}
         <div className="experience-card">
           <Code2 size={32} />
@@ -125,7 +140,7 @@ export default function Achievements() {
 
           <div className="stats-grid">
             <div>
-              <h4>80+</h4>
+              <h4>100+</h4>
               <p>LeetCode</p>
             </div>
 

@@ -4,6 +4,22 @@ import employeeManagement from "../assets/employee-management.png";
 
 const projects = [
   {
+  title: "Enterprise AI Business Intelligence Dashboard",
+  desc: "Production-ready AI-powered analytics platform featuring anomaly detection, forecasting, interactive dashboards, PDF/Excel export, LLM insights, authentication, and real-time business analytics.",
+  tech: [
+    "Python",
+    "FastAPI",
+    "Pandas",
+    "Scikit-Learn",
+    "PostgreSQL",
+    "React",
+    "Chart.js",
+    "OpenAI API"
+  ],
+  github: "https://github.com/Aravind628187/enterprise-ai-bi-dashboard",
+  image: enterpriseDashboard,
+  },
+  {
     title: "AI Resume Analyzer Pro",
     desc: "AI Resume Analyzer Pro - A free ATS resume evaluation tool that analyzes resumes, calculates ATS scores, identifies missing skills, and provides recruiter-focused improvement suggestions.",
     tech: ["React", "Vite", "Javascript","HTML5","CSS3"],
@@ -17,15 +33,9 @@ const projects = [
     tech: ["Python", "MongoDB", "React","Express","Node.js","Mechine Learning"],
     github: "https://github.com/Aravind628187/Car-price-prediction-system",
     image: hubsCars,
-  },
+  }
 
-  {
-    title: "Employee Management System",
-    desc: "Full CRUD employee management application built using Spring Boot and MySQL with REST APIs.",
-    tech: ["Spring Boot", "MySQL"],
-    github: "#",
-    image: employeeManagement,
-  },
+
 ];
 
 export default function Projects() {
@@ -35,14 +45,12 @@ export default function Projects() {
       <span className="projects-tag">
         🚀 My Work
       </span>
-
       <h2 className="projects-title">
-        Featured Projects
+        Data Science & AI Projects
       </h2>
 
       <p className="projects-subtitle">
-        Projects showcasing backend development,
-        full-stack engineering and AI integrations.
+          A collection of Data Science, Data Analytics, Machine Learning, AI, and Full-Stack projects focused on solving real-world business problems through data-driven solutions.
       </p>
 
       <div className="projects-grid">

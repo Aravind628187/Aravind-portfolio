@@ -43,7 +43,7 @@ export default function Hero() {
           <div className="hero-left">
             <div className="status-badge">
               <span>🚀</span>
-              <p>Open To Internships & Full-Time Opportunities</p>
+              <p>Open to Data Science & Data Analytics Internships</p>
             </div>
 
             <motion.h1
@@ -55,29 +55,31 @@ export default function Hero() {
               Aravind Kumar
             </motion.h1>
 
-            <h2 className="hero-role">Java Backend Developer</h2>
+            <h2 className="hero-role">Aspiring Data Scientist & Data Analyst</h2>
 
             <p className="hero-description">
-              Passionate Java Backend Developer specializing in Spring Boot, REST APIs, Microservices, and Cloud-native applications.
+              Passionate about Data Science, Data Analytics, Machine Learning, and Artificial Intelligence. I build predictive ML models, interactive dashboards, and data-driven solutions using Python, SQL, Power BI, Excel, Pandas, NumPy, and Scikit-Learn.
             </p>
 
             <div className="hero-highlights">
 
-              <span>🟢 Node.js</span>
+              <span>🐍 Python</span>
 
-              <span>🍃 Spring Boot</span>
+              <span>🗄 SQL</span>
 
-              <span>⚙ REST APIs</span>
+              <span>📊 Power BI</span>
 
-              <span>📦 Microservices</span>
+              <span>📈 Machine Learning</span>
 
-              <span>☁ AWS</span>
+              <span>🤖 Data Science</span>
+
+              <span>📉 Data Analytics</span>
 
             </div>
 
             <div className="hero-buttons">
               <a href="#projects" className="primary-btn">
-                View Projects
+                Explore My Projects
               </a>
 
               <a
@@ -86,7 +88,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Download Resume
+                Download CV
               </a>
             </div>
 
