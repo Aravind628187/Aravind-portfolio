@@ -1,6 +1,6 @@
 import resumeAnalyzer from "../assets/resume-analyzer.png";
 import hubsCars from "../assets/hubs-cars.png";
-import employeeManagement from "../assets/employee-management.png";
+import employeeManagement from "../assets/enterprise-Dashboard.png";
 
 const projects = [
   {
