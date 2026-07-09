@@ -12,13 +12,17 @@ import "../App.css";
 
 export default function Hero() {
   const techStack = [
-    "Java",
-    "Spring Boot",
-    "React",
-    "MySQL",
-    "MongoDB",
-    "AWS",
-  ];
+  "Java",
+  "Python",
+  "Spring Boot",
+  "React.js",
+  "REST APIs",
+  "Node.js",
+  "Express.js",
+  "MySQL",
+  "MongoDB",
+  "Git",
+  "GitHub",];
 
   const [stats, setStats] = useState({
     leetcodeSolved: 0,
@@ -43,7 +47,7 @@ export default function Hero() {
           <div className="hero-left">
             <div className="status-badge">
               <span>🚀</span>
-              <p>Open to Data Science & Data Analytics Internships</p>
+              <p>Open to Full-Time & Full-Stack Developer Internship Opportunities</p>
             </div>
 
             <motion.h1
@@ -55,26 +59,39 @@ export default function Hero() {
               Aravind Kumar
             </motion.h1>
 
-            <h2 className="hero-role">Aspiring Data Scientist & Data Analyst</h2>
+            <h2 className="hero-role">Aspiring Full-Stack Developer</h2>
 
             <p className="hero-description">
-              Passionate about Data Science, Data Analytics, Machine Learning, and Artificial Intelligence. I build predictive ML models, interactive dashboards, and data-driven solutions using Python, SQL, Power BI, Excel, Pandas, NumPy, and Scikit-Learn.
+              Passionate about Full-Stack Web Development and building modern, scalable web applications. I build responsive user interfaces with React.js and develop secure, efficient backend services using Node.js, Express.js, and Java.
             </p>
 
             <div className="hero-highlights">
 
+              <span>⚛️ React.js</span>
+
+              <span>🟢 Node.js</span>
+
+              <span>🚀 Express.js</span>
+
+              <span>☕ Java</span>
+              
               <span>🐍 Python</span>
 
-              <span>🗄 SQL</span>
+              <span>🗄️ MySQL</span>
 
-              <span>📊 Power BI</span>
+              <span>🍃 MongoDB</span>
 
-              <span>📈 Machine Learning</span>
+              <span>📮 Postman</span>
 
-              <span>🤖 Data Science</span>
+              <span>🔗 REST APIs</span>
 
-              <span>📉 Data Analytics</span>
+              <span>🔐 JWT Authentication</span>
 
+              <span>🌿 Git</span>
+
+              <span>🐙 GitHub</span>
+
+              <span>🐳 Docker</span>
             </div>
 
             <div className="hero-buttons">

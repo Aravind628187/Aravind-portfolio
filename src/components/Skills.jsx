@@ -1,20 +1,23 @@
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Programming",
-      skills: ["Python", "SQL", "JavaScript", "Java"],
+      title: "Programming Languages",
+      skills: [
+        "Java",
+        "JavaScript",
+        "Python",
+        "SQL",
+      ],
     },
     {
       title: "Frameworks & Libraries",
       skills: [
-        "FastAPI",
-        "Flask",
         "React.js",
         "Node.js",
-        "Pandas",
-        "NumPy",
-        "Scikit-learn",
-        "SQLAlchemy",
+        "Express.js",
+        "Spring Boot",
+        "FastAPI",
+        "Flask",
       ],
     },
     {
@@ -26,30 +29,30 @@ export default function Skills() {
       ],
     },
     {
-      title: "Data Analytics",
-      skills: [
-        "Microsoft Excel",
-        "Power BI",
-        "Jupyter Notebook",
-      ],
-    },
-    {
-      title: "Tools",
+      title: "Tools & DevOps",
       skills: [
         "Git",
         "GitHub",
         "Docker",
         "Postman",
         "VS Code",
-        "GitHub Actions",
+        "GitHub Actions (CI/CD)",
       ],
     },
     {
-      title: "Cloud & Testing",
+      title: "Core Concepts",
       skills: [
-        "AWS S3",
         "REST APIs",
-        "Pytest",
+        "JWT Authentication",
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming (OOP)",
+        "MVC Architecture",
+      ],
+    },
+    {
+      title: "Cloud",
+      skills: [
+        "AWS",
       ],
     },
   ];
@@ -66,8 +69,7 @@ export default function Skills() {
       </h2>
 
       <p className="skills-subtitle">
-        Technologies I use to build AI, Machine Learning, Data Analytics,
-        and Full-Stack applications.
+        Technologies I use to build modern, scalable, and secure Full-Stack web applications.
       </p>
 
       {skillCategories.map((category) => (

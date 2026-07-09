@@ -24,32 +24,6 @@ export default function Achievements() {
       </div>
       {/* HP LIFE Data Science & Analytics */}
 
-       <div className="experience-card certificate-card">
-
-          <img
-            src="/certificates/hp-data-science.png"
-            alt="HP Data Science & Analytics"
-            className="certificate-image"
-          />
-
-          <h3>HP LIFE – Data Science & Analytics</h3>
-
-          <p>
-           Issued by HP Foundation • June 2026
-          </p>
-
-          <a
-           href="/certificates/hp-data-science.png"
-           target="_blank"
-           rel="noreferrer"
-           className="certificate-btn"
-          >
-            View Certificate
-           <ExternalLink size={16} />
-         </a>
-
-        </div>
-
       <div className="experience-grid">
 
         {/* React Certificate */}

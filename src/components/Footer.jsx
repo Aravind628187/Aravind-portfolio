@@ -14,7 +14,7 @@ export default function Footer() {
         </h3>
 
         <p className="footer-role">
-            Building AI-Powered Data Solutions with Python, SQL & Machine Learning
+          Building Modern Full-Stack Web Applications with React, Node.js & Java
         </p>
 
         <div className="footer-socials">

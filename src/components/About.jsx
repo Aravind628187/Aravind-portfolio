@@ -7,33 +7,38 @@ export default function About() {
           <span className="about-badge">About Me</span>
 
           <h2>
-             Aspiring Data Scientist & Data Analyst
+            Aspiring Full-Stack Developer
           </h2>
 
           <p>
             I'm Aravind Kumar, a B.Tech CSE (AI & ML) student at Parul
-            University passionate about Data Science, Data Analytics,
-            Machine Learning, and Artificial Intelligence. I enjoy
-            transforming raw data into meaningful insights using Python,
-            SQL, Power BI, Excel, and Machine Learning.
+            University passionate about Full-Stack Web Development and
+            building modern, scalable web applications. I enjoy creating
+            responsive user interfaces with React.js and developing secure,
+            efficient backend services using Node.js, Express.js, and Java.
           </p>
 
           <p>
-            I build end-to-end data analytics projects, predictive machine
-            learning models, interactive dashboards, and AI-powered
-            applications while continuously improving my analytical and
-            problem-solving skills.
+            I build end-to-end web applications by integrating frontend,
+            backend, databases, and REST APIs. I have experience working
+            with React.js, Node.js, Express.js, Spring Boot, MySQL,
+            MongoDB, JWT Authentication, and Git while continuously
+            improving my problem-solving and software development skills.
           </p>
 
           <div className="about-skills">
-            <span>Python</span>
-            <span>SQL</span>
-            <span>Pandas</span>
-            <span>NumPy</span>
-            <span>Scikit-Learn</span>
-            <span>Excel</span>
-            <span>Power BI</span>
-            <span>Machine Learning</span>
+            <span>React.js</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>Express.js</span>
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>MySQL</span>
+            <span>MongoDB</span>
+            <span>REST APIs</span>
+            <span>JWT</span>
+            <span>Git</span>
+            <span>GitHub</span>
           </div>
         </div>
 
