@@ -192,13 +192,15 @@ export default function Hero() {
               <div className="particle p3"></div>
               <div className="particle p4"></div>
 
-              <motion.img
-                src="/aravind-ai-transparent.png"
-                alt="Aravind Kumar"
-                className="profile-image"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              />
+              <div className="portrait-shell">
+                <motion.img
+                  src="/aravind-ai-transparent.png"
+                  alt="Aravind Kumar"
+                  className="profile-image"
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                />
+              </div>
               <div className="scene-platform"></div>
             </div>
           </div>
