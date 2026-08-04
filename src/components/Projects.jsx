@@ -4,7 +4,6 @@ import resumeAnalyzer from "../assets/resume-analyzer.png";
 import hubsCars from "../assets/hubs-cars.png";
 import enterpriseDashboard from "../assets/enterprise-Dashboard.png";
 import leadFlowPro from "../assets/leadflow-pro.webp";
-import TiltCard from "./TiltCard";
 
 const projects = [
   {
@@ -61,16 +60,26 @@ export default function Projects() {
 
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <TiltCard className={`project-card${project.featured ? " project-card-featured" : ""}`} key={project.title}>
-            <div className="project-image-wrapper">
-              <img src={project.image} alt={`${project.title} interface`} className="project-image" loading="lazy" />
-              <div className="project-image-overlay" />
+          <article className={`project-card${project.featured ? " project-card-featured" : ""}`} key={project.title}>
+            <div className="project-border-beam" aria-hidden="true" />
+            <div className="project-visual">
+              <div className="project-browser-bar" aria-hidden="true">
+                <span /><span /><span />
+                <small>{project.demo ? "live.preview" : "project.preview"}</small>
+              </div>
+              <div className="project-image-wrapper">
+                <img src={project.image} alt={`${project.title} interface`} className="project-image" loading="lazy" />
+                <div className="project-image-overlay" />
+              </div>
               <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
-              {project.featured && <span className="project-featured"><i /> Live project</span>}
+              <div className="project-visual-orbit" aria-hidden="true"><i /></div>
             </div>
 
             <div className="project-content">
-              <span className="project-category">{project.category}</span>
+              <div className="project-meta">
+                <span className="project-category">{project.category}</span>
+                {project.featured && <span className="project-featured"><i /> Live now</span>}
+              </div>
               <h3>{project.title}</h3>
               <p>{project.desc}</p>
 
@@ -89,7 +98,7 @@ export default function Projects() {
                 )}
               </div>
             </div>
-          </TiltCard>
+          </article>
         ))}
       </div>
     </section>
