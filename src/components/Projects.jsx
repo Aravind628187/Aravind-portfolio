@@ -1,3 +1,5 @@
+import { ArrowUpRight, ExternalLink, Sparkles } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import resumeAnalyzer from "../assets/resume-analyzer.png";
 import hubsCars from "../assets/hubs-cars.png";
 import enterpriseDashboard from "../assets/enterprise-Dashboard.png";
@@ -6,134 +8,90 @@ import TiltCard from "./TiltCard";
 
 const projects = [
   {
-  title: "Enterprise AI Business Intelligence Dashboard",
-  desc: "Production-ready AI-powered analytics platform featuring anomaly detection, forecasting, interactive dashboards, PDF/Excel export, LLM insights, authentication, and real-time business analytics.",
-  tech: [
-    "Python",
-    "FastAPI",
-    "Pandas",
-    "Scikit-Learn",
-    "PostgreSQL",
-    "React",
-    "Chart.js",
-    "OpenAI API"
-  ],
-  github: "https://github.com/Aravind628187/enterprise-ai-bi-platform",
-  image: enterpriseDashboard,
+    title: "Enterprise AI Business Intelligence Dashboard",
+    category: "AI Analytics Platform",
+    desc: "Production-ready analytics platform with anomaly detection, forecasting, interactive dashboards, document exports, LLM insights, and real-time business intelligence.",
+    tech: ["Python", "FastAPI", "Pandas", "Scikit-Learn", "PostgreSQL", "React", "Chart.js", "OpenAI API"],
+    github: "https://github.com/Aravind628187/enterprise-ai-bi-platform",
+    image: enterpriseDashboard,
   },
   {
     title: "LeadFlow Pro",
-    desc: "Production-ready lead management platform with secure role-based workspaces, pipeline automation, live analytics, task tracking, notifications, and an audited lead lifecycle.",
+    category: "Full-Stack SaaS",
+    desc: "Secure lead-management workspace with pipeline automation, live analytics, task tracking, notifications, role-based access, and an audited lead lifecycle.",
     tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
     github: "https://github.com/Aravind628187/LeadFlow-Pro",
     demo: "https://lead-flow-pro-green.vercel.app/",
     image: leadFlowPro,
+    featured: true,
   },
   {
     title: "AI Resume Analyzer Pro",
-    desc: "AI Resume Analyzer Pro - A free ATS resume evaluation tool that analyzes resumes, calculates ATS scores, identifies missing skills, and provides recruiter-focused improvement suggestions.",
-    tech: ["React", "Vite", "Javascript","HTML5","CSS3"],
+    category: "AI Career Tool",
+    desc: "Free ATS evaluation experience that analyzes resumes, calculates compatibility scores, finds missing skills, and delivers recruiter-focused recommendations.",
+    tech: ["React", "Vite", "JavaScript", "HTML5", "CSS3"],
     github: "https://github.com/Aravind628187/ai-resume-analyzer-pro",
     demo: "https://ai-resume-analyzer-pro-pi.vercel.app",
     image: resumeAnalyzer,
+    featured: true,
   },
-
   {
     title: "HUB Cars",
-    desc: "AI powered smart car marketplace application with price prediction and vehicle recommendation features.",
-    tech: ["Python", "MongoDB", "React","Express","Node.js","Mechine Learning"],
+    category: "Machine Learning",
+    desc: "Smart car marketplace enhanced with machine-learning price prediction and personalized vehicle recommendation features.",
+    tech: ["Python", "MongoDB", "React", "Express", "Node.js", "Machine Learning"],
     github: "https://github.com/Aravind628187/Car-price-prediction-system",
     image: hubsCars,
-  }
-
-
+  },
 ];
 
 export default function Projects() {
   return (
     <section id="projects" className="projects-section">
-
-      <span className="projects-tag">
-        🚀 My Work
-      </span>
-      <h2 className="projects-title">
-        Data Science & AI Projects
-      </h2>
-
-      <p className="projects-subtitle">
-          A collection of Data Science, Data Analytics, Machine Learning, AI, and Full-Stack projects focused on solving real-world business problems through data-driven solutions.
-      </p>
+      <div className="projects-heading-row">
+        <div>
+          <span className="projects-tag"><Sparkles size={14} /> Selected work</span>
+          <h2 className="projects-title">Projects built to <span>make an impact.</span></h2>
+        </div>
+        <p className="projects-subtitle">
+          A selection of full-stack, data, and AI products designed around real
+          business problems—from the first interface to production deployment.
+        </p>
+      </div>
 
       <div className="projects-grid">
-
-        {projects.map((project) => (
-
-          <TiltCard
-            className="project-card"
-            key={project.title}
-          >
-
-            {/* Project Screenshot */}
+        {projects.map((project, index) => (
+          <TiltCard className={`project-card${project.featured ? " project-card-featured" : ""}`} key={project.title}>
             <div className="project-image-wrapper">
-
-              <img
-               src={project.image}
-               alt={project.title}
-               className="project-image"
-              />
-
-  
-
+              <img src={project.image} alt={`${project.title} interface`} className="project-image" loading="lazy" />
+              <div className="project-image-overlay" />
+              <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
+              {project.featured && <span className="project-featured"><i /> Live project</span>}
             </div>
 
             <div className="project-content">
-
+              <span className="project-category">{project.category}</span>
               <h3>{project.title}</h3>
-
               <p>{project.desc}</p>
 
-              <div className="project-tech">
-
-                {project.tech.map((tech) => (
-                  <span key={tech}>
-                    {tech}
-                  </span>
-                ))}
-
+              <div className="project-tech" aria-label={`${project.title} technologies`}>
+                {project.tech.map((tech) => <span key={tech}>{tech}</span>)}
               </div>
 
               <div className="project-actions">
-
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="github-btn"
-                >
-                  GitHub →
+                <a href={project.github} target="_blank" rel="noreferrer" className="github-btn" aria-label={`View ${project.title} on GitHub`}>
+                  <FaGithub size={17} /> Source <ArrowUpRight size={15} />
                 </a>
-
                 {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="demo-btn"
-                  >
-                    Live Demo →
+                  <a href={project.demo} target="_blank" rel="noreferrer" className="demo-btn" aria-label={`Open ${project.title} live demo`}>
+                    <ExternalLink size={17} /> Live Demo <ArrowUpRight size={15} />
                   </a>
                 )}
-
               </div>
-
             </div>
-
           </TiltCard>
-
         ))}
-
       </div>
-
     </section>
   );
 }
