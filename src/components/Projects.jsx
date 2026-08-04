@@ -1,6 +1,7 @@
 import resumeAnalyzer from "../assets/resume-analyzer.png";
 import hubsCars from "../assets/hubs-cars.png";
 import enterpriseDashboard from "../assets/enterprise-Dashboard.png";
+import leadFlowPro from "../assets/leadflow-pro.webp";
 import TiltCard from "./TiltCard";
 
 const projects = [
@@ -21,10 +22,19 @@ const projects = [
   image: enterpriseDashboard,
   },
   {
+    title: "LeadFlow Pro",
+    desc: "Production-ready lead management platform with secure role-based workspaces, pipeline automation, live analytics, task tracking, notifications, and an audited lead lifecycle.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
+    github: "https://github.com/Aravind628187/LeadFlow-Pro",
+    demo: "https://lead-flow-pro-green.vercel.app/",
+    image: leadFlowPro,
+  },
+  {
     title: "AI Resume Analyzer Pro",
     desc: "AI Resume Analyzer Pro - A free ATS resume evaluation tool that analyzes resumes, calculates ATS scores, identifies missing skills, and provides recruiter-focused improvement suggestions.",
     tech: ["React", "Vite", "Javascript","HTML5","CSS3"],
     github: "https://github.com/Aravind628187/ai-resume-analyzer-pro",
+    demo: "https://ai-resume-analyzer-pro-pi.vercel.app",
     image: resumeAnalyzer,
   },
 
@@ -103,14 +113,16 @@ export default function Projects() {
                   GitHub →
                 </a>
 
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="demo-btn"
-                >
-                  Live Demo →
-                </a>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="demo-btn"
+                  >
+                    Live Demo →
+                  </a>
+                )}
 
               </div>
 
