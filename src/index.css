@@ -1993,3 +1993,174 @@ body::before {
 }
 
 }
+
+/* Interactive 3D layer */
+.hero-right {
+  min-height: 680px;
+  perspective: 1200px;
+  --scene-x: 0deg;
+  --scene-y: 0deg;
+}
+
+.hero-3d-scene {
+  position: relative;
+  width: min(620px, 44vw);
+  height: 650px;
+  display: grid;
+  place-items: center;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--scene-y)) rotateY(var(--scene-x));
+  transition: transform 180ms ease-out;
+}
+
+.hero-3d-scene .profile-image {
+  width: min(650px, 48vw);
+  max-height: 650px;
+  object-fit: contain;
+  transform: translateZ(70px);
+}
+
+.orbit {
+  position: absolute;
+  inset: 50%;
+  border: 1px solid rgba(139, 92, 246, .36);
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.orbit-one {
+  width: 540px;
+  height: 540px;
+  margin: -270px;
+  transform: rotateX(68deg) rotateZ(12deg) translateZ(5px);
+  animation: orbit-spin-one 14s linear infinite;
+}
+
+.orbit-two {
+  width: 440px;
+  height: 440px;
+  margin: -220px;
+  border-color: rgba(56, 189, 248, .28);
+  transform: rotateY(66deg) rotateZ(-18deg) translateZ(20px);
+  animation: orbit-spin-two 18s linear infinite reverse;
+}
+
+.orbit span {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 12%;
+  left: 17%;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 12px #8b5cf6, 0 0 30px #8b5cf6;
+}
+
+.orbit-two span {
+  background: #38bdf8;
+  box-shadow: 0 0 12px #38bdf8, 0 0 30px #38bdf8;
+}
+
+.code-orb {
+  position: absolute;
+  z-index: 4;
+  padding: 10px 15px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 14px;
+  background: rgba(10, 15, 30, .72);
+  backdrop-filter: blur(14px);
+  color: #e0e7ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  box-shadow: 0 14px 38px rgba(0,0,0,.35);
+  transform: translateZ(125px);
+  animation: float-orb 4.5s ease-in-out infinite;
+}
+
+.orb-react { top: 19%; left: 4%; }
+.orb-java { top: 38%; right: -2%; animation-delay: -1.4s; }
+.orb-node { bottom: 18%; left: 5%; animation-delay: -2.8s; }
+
+.scene-platform {
+  position: absolute;
+  bottom: 28px;
+  width: 390px;
+  height: 90px;
+  border: 1px solid rgba(139, 92, 246, .35);
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(124,58,237,.35), rgba(15,23,42,.08) 65%, transparent 72%);
+  filter: drop-shadow(0 0 28px rgba(124,58,237,.35));
+  transform: rotateX(72deg) translateZ(-25px);
+}
+
+.tilt-card {
+  --rotate-x: 0deg;
+  --rotate-y: 0deg;
+  --glow-x: 50%;
+  --glow-y: 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(900px) rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
+  transition: transform 160ms ease-out, border-color .3s ease, box-shadow .3s ease;
+  will-change: transform;
+}
+
+.tilt-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(circle at var(--glow-x) var(--glow-y), rgba(96,165,250,.18), transparent 42%);
+  transition: opacity .25s ease;
+}
+
+.tilt-card:hover::after { opacity: 1; }
+.tilt-card > * { position: relative; z-index: 1; transform: translateZ(14px); }
+.project-card.tilt-card:hover,
+.experience-card.tilt-card:hover,
+.skill-card.tilt-card:hover { transform: perspective(900px) rotateX(var(--rotate-x)) rotateY(var(--rotate-y)); }
+
+@keyframes orbit-spin-one {
+  to { transform: rotateX(68deg) rotateZ(372deg) translateZ(5px); }
+}
+
+@keyframes orbit-spin-two {
+  to { transform: rotateY(66deg) rotateZ(342deg) translateZ(20px); }
+}
+
+@keyframes float-orb {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -14px; }
+}
+
+@media (max-width: 1100px) {
+  .hero-content { flex-direction: column; }
+  .hero-right { width: 100%; min-height: 580px; }
+  .hero-3d-scene { width: min(600px, 92vw); height: 580px; }
+  .hero-3d-scene .profile-image { width: min(600px, 86vw); max-height: 580px; }
+}
+
+@media (max-width: 640px) {
+  .hero-container { padding: 110px 20px 0; }
+  .hero-title { font-size: clamp(3.2rem, 18vw, 5rem); }
+  .hero-role { font-size: 2rem; }
+  .status-badge { white-space: normal; }
+  .hero-right { min-height: 460px; }
+  .hero-3d-scene { height: 460px; }
+  .hero-3d-scene .profile-image { max-height: 455px; }
+  .orbit-one { width: 390px; height: 390px; margin: -195px; }
+  .orbit-two { width: 330px; height: 330px; margin: -165px; }
+  .orb-java { right: 1%; }
+  .scene-platform { width: 280px; bottom: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce), (hover: none) {
+  .hero-3d-scene,
+  .tilt-card { transform: none; transition: none; }
+  .orbit, .code-orb { animation: none; }
+}

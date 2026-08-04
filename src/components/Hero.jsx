@@ -11,19 +11,6 @@ import "../App.css";
 
 
 export default function Hero() {
-  const techStack = [
-  "Java",
-  "Python",
-  "Spring Boot",
-  "React.js",
-  "REST APIs",
-  "Node.js",
-  "Express.js",
-  "MySQL",
-  "MongoDB",
-  "Git",
-  "GitHub",];
-
   const [stats, setStats] = useState({
     leetcodeSolved: 0,
     hackerrankSolved: 0,
@@ -36,8 +23,17 @@ export default function Hero() {
       .catch((err) => console.error(err));
   }, []);
 
+  const handleSceneMove = (event) => {
+    if (event.pointerType === "touch") return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    event.currentTarget.style.setProperty("--scene-x", `${x * 14}deg`);
+    event.currentTarget.style.setProperty("--scene-y", `${y * -12}deg`);
+  };
+
   return (
-    <section className="hero-section">
+    <section id="home" className="hero-section">
       <div className="hero-glow hero-glow-1"></div>
       <div className="hero-glow hero-glow-2"></div>
 
@@ -183,26 +179,28 @@ export default function Hero() {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="hero-right">
-            <div className="image-bg-glow"></div>
-            <div className="image-bg-glow-2"></div>
-            <div className="particle p1"></div>
-            <div className="particle p2"></div>
-            <div className="particle p3"></div>
-            <div className="particle p4"></div>
+          <div className="hero-right" onPointerMove={handleSceneMove}>
+            <div className="hero-3d-scene">
+              <div className="image-bg-glow"></div>
+              <div className="orbit orbit-one"><span></span></div>
+              <div className="orbit orbit-two"><span></span></div>
+              <div className="code-orb orb-react">React</div>
+              <div className="code-orb orb-java">Java</div>
+              <div className="code-orb orb-node">Node</div>
+              <div className="particle p1"></div>
+              <div className="particle p2"></div>
+              <div className="particle p3"></div>
+              <div className="particle p4"></div>
 
-            <motion.img
-              src="/aravind-ai-transparent.png"
-              alt="Aravind Kumar"
-              className="profile-image"
-              animate={{
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-              }}
-            />
+              <motion.img
+                src="/aravind-ai-transparent.png"
+                alt="Aravind Kumar"
+                className="profile-image"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <div className="scene-platform"></div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
 import {
-  Trophy,
   GraduationCap,
   Code2,
   ExternalLink,
 } from "lucide-react";
+import TiltCard from "./TiltCard";
 
 export default function Achievements() {
   return (
@@ -27,7 +27,7 @@ export default function Achievements() {
       <div className="experience-grid">
 
         {/* React Certificate */}
-        <div className="experience-card certificate-card">
+        <TiltCard className="experience-card certificate-card">
           
           <img
             src="/certificates/react-certificate.png"
@@ -50,10 +50,10 @@ export default function Achievements() {
             View Certificate
             <ExternalLink size={16} />
           </a>
-        </div>
+        </TiltCard>
 
         {/* Java Certificate */}
-        <div className="experience-card certificate-card">
+        <TiltCard className="experience-card certificate-card">
           <img
             src="/certificates/java-certificate.png"
             alt="Java Certificate"
@@ -75,10 +75,10 @@ export default function Achievements() {
             View Certificate
             <ExternalLink size={16} />
           </a>
-        </div>
+        </TiltCard>
 
         {/* Android Certificate */}
-        <div className="experience-card certificate-card">
+        <TiltCard className="experience-card certificate-card">
           <img
             src="/certificates/android-kotlin-certificate.jpg"
             alt="Android Certificate"
@@ -92,10 +92,10 @@ export default function Achievements() {
           </p>
 
         
-        </div>
+        </TiltCard>
 
         {/* ICAT */}
-        <div className="experience-card">
+        <TiltCard className="experience-card">
           <GraduationCap size={32} />
 
           <h3>ICAT Participation</h3>
@@ -104,10 +104,10 @@ export default function Achievements() {
             Participated in Internship Common
             Aptitude Test (ICAT).
           </p>
-        </div>
+        </TiltCard>
 
         {/* Coding Journey */}
-        <div className="experience-card">
+        <TiltCard className="experience-card">
           <Code2 size={32} />
 
           <h3>Coding Journey</h3>
@@ -123,7 +123,7 @@ export default function Achievements() {
               <p>HackerRank</p>
             </div>
           </div>
-        </div>
+        </TiltCard>
 
       </div>
     </section>

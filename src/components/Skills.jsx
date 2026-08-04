@@ -1,3 +1,5 @@
+import TiltCard from "./TiltCard";
+
 export default function Skills() {
   const skillCategories = [
     {
@@ -79,9 +81,9 @@ export default function Skills() {
 
           <div className="skills-grid">
             {category.skills.map((skill) => (
-              <div key={skill} className="skill-card">
+              <TiltCard key={skill} className="skill-card">
                 {skill}
-              </div>
+              </TiltCard>
             ))}
           </div>
 

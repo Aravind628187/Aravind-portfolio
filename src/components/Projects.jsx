@@ -1,6 +1,7 @@
 import resumeAnalyzer from "../assets/resume-analyzer.png";
 import hubsCars from "../assets/hubs-cars.png";
 import enterpriseDashboard from "../assets/enterprise-Dashboard.png";
+import TiltCard from "./TiltCard";
 
 const projects = [
   {
@@ -16,7 +17,7 @@ const projects = [
     "Chart.js",
     "OpenAI API"
   ],
-  github: "https://github.com/Aravind628187/enterprise-ai-bi-dashboard",
+  github: "https://github.com/Aravind628187/enterprise-ai-bi-platform",
   image: enterpriseDashboard,
   },
   {
@@ -55,9 +56,9 @@ export default function Projects() {
 
       <div className="projects-grid">
 
-        {projects.map((project, index) => (
+        {projects.map((project) => (
 
-          <div
+          <TiltCard
             className="project-card"
             key={project.title}
           >
@@ -69,9 +70,6 @@ export default function Projects() {
                src={project.image}
                alt={project.title}
                className="project-image"
-               onError={(e) => {
-                  console.log("Image failed:", project.image);
-                }}
               />
 
   
@@ -118,7 +116,7 @@ export default function Projects() {
 
             </div>
 
-          </div>
+          </TiltCard>
 
         ))}
 
